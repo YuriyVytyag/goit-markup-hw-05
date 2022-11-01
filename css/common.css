@@ -1,3 +1,4 @@
+
 :root {
     --accent-color: #2196F3;
     --font-color: #212121;
@@ -18,9 +19,16 @@ h6,
 p,
 ul,
 ol,
-li {
+li
+ {
     margin: 0;
     padding: 0;
+}
+
+img {
+    display: block;
+    min-width: 100%;
+    height: auto;
 }
 
 body {
@@ -245,6 +253,10 @@ button{
     margin-bottom: 9px;
  }
 
+ .social-card:not(:last-child) {
+    margin-right: 10px;
+}
+
  .social-icons {
     display: flex;
     list-style: none;
@@ -258,7 +270,7 @@ button{
     justify-content: center;
     width: 44px;
     height: 44px;
-    fill: var(--secondary-font-color);
+    fill: #AFB1B8;
     border-radius: 50%;
  /*    width: 20px;
     height: 20px; */
@@ -267,10 +279,7 @@ button{
 
 .social-icon:hover, .social-icon:focus {
     background-color: var(--accent-color);
-}
-
-.social-card:not(:last-child) {
-    margin-right: 10px;
+    fill: var(--white-color);
 }
 
 .footer-container{
@@ -325,6 +334,8 @@ button{
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
